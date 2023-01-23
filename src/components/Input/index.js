@@ -6,6 +6,7 @@ export function Input({
   value,
   disabled,
   type,
+  dataTest
 }) {
   return (
     <Container
@@ -14,6 +15,7 @@ export function Input({
       value={value}
       disabled={disabled}
       type={type}
+      data-test={dataTest}
     />
   );
 }

@@ -19,6 +19,6 @@ export default function App() {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #9567be;
+  background-color: #8C11BE;
   height: 100vh;
 `;

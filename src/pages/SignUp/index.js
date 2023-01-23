@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { Input } from "../../components/Input";
-import { LogButton } from "../../components/LogButton";
+import { FormButton } from "../../components/FormButton";
 
 import { api } from "../../services/api";
 
@@ -49,6 +49,7 @@ export function SignUp() {
           onChange={(e) => setUsername(e.target.value)}
           disabled={isLoading}
           type={"text"}
+          dataTest={"name"}
         />
 
         <Input
@@ -57,6 +58,7 @@ export function SignUp() {
           onChange={(e) => setEmail(e.target.value)}
           disabled={isLoading}
           type={"email"}
+          dataTest={"email"}
         />
 
         <Input
@@ -65,6 +67,7 @@ export function SignUp() {
           onChange={(e) => setPassword(e.target.value)}
           disabled={isLoading}
           type={"password"}
+          dataTest={"password"}
         />
 
         <Input
@@ -73,12 +76,13 @@ export function SignUp() {
           onChange={(e) => setRepeatPassword(e.target.value)}
           disabled={isLoading}
           type={"password"}
+          dataTest={"conf-password"}
         />
 
-        <LogButton text={"Cadastrar"} disabled={isLoading} />
+        <FormButton text={"Cadastrar"} disabled={isLoading} dataTest={"sign-up-submit"}/>
       </FormContainer>
 
-      <Link to={"/"} data-test="login-link">
+      <Link to={"/"}>
         <Text>Já tem uma conta? Entre agora!</Text>
       </Link>
     </Container>

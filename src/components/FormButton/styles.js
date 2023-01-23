@@ -9,6 +9,7 @@ export const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Text = styled.p`

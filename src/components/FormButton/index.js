@@ -2,9 +2,9 @@ import { ThreeDots } from "react-loader-spinner";
 
 import { Container, Text } from "./styles";
 
-export function LogButton({ text, disabled }) {
+export function FormButton({ text, disabled, dataTest }) {
   return (
-    <Container type="submit" disabled={disabled}>
+    <Container type="submit" disabled={disabled} data-test={dataTest}>
       {disabled ? (
         <ThreeDots
           height="40"
